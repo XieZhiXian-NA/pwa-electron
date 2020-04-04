@@ -61,7 +61,7 @@
 
     ```
 
-      ![avatar](https://github.com/XieZhiXian-NA/pwa-electron/raw/master/ipc.png)
+    ![avatar](./ipc.png)
 
 + Electron shell模块 在用户默认浏览器中打开外部URL 本地的管理文件
   + shell 使用默认应用程序管理文件和url  主进程与渲染进程都可以使用
@@ -187,4 +187,4 @@
   build\icons 
 
 + 打包遇到的错误 注意引用static文件夹下面图片的路径问题
-![pack]()[https://raw.githubusercontent.com/XieZhiXian-NA/pwa-electron/master/electron%E6%A8%A1%E5%9D%97.png](https://raw.githubusercontent.com/XieZhiXian-NA/pwa-electron/master/electron模块.png)
+![image](打包.jpg)
