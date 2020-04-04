@@ -74,6 +74,7 @@
   ```
 
 + webview
+  
   > 与iframe相似 但是webview与你的应用运行的是不同的进程，它不拥有渲染进程的权限，并且应用和嵌入内容之间的交互全部都是异步，这能保证应用的安全性不受嵌入内容的影响
 + Dialog
   
@@ -104,6 +105,7 @@
    ```
 
 + 消息通知
+  
   + Notification
 + 监听网络变化
   + online
@@ -139,8 +141,10 @@
     npm install sass-loader node-sass
     在配置文件rule中配置规则
 + 隐藏顶部菜单
+  
   > win.setMenu(null)
 + 隐藏最大化、最小化、关闭按钮
+  
   > 创建window 时 传入frame:false参数 6
 + 自定义导航栏
   + 导航可拖拽
@@ -183,4 +187,4 @@
   build\icons 
 
 + 打包遇到的错误 注意引用static文件夹下面图片的路径问题
-![image](./打包.jpg)
+![https://github.com/XieZhiXian-NA/pwa-electron/blob/master/electron%E6%A8%A1%E5%9D%97.png](https://github.com/XieZhiXian-NA/pwa-electron/blob/master/electron模块.png))
