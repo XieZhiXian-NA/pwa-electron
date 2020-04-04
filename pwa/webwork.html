@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.bootcss.com/fetch/3.0.0/fetch.min.js"></script> -->
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- <script>
+        const worker = new Worker('work.js')
+        worker.addEventListener('message',e=>{
+            console.log(e.data)
+        })
+    </script> -->
+    <img src="6.jpg" alt="">
+    Service worker
+    <h1>dddd</h1>
+   <script>
+    console.log('asss');
+
+    (async ()=>{
+       
+        // const res = await fetch('http://localhost:3000/api/getUser')
+        // const re = await res.json()
+        const res = await axios.get('http://localhost:3000/api/getUser')
+        const re = res.data;
+        var h2 = document.querySelector('h1');
+        h2.innerHTML = re.data;
+        
+    })()
+
+
+     window.addEventListener('load',()=>{
+         if('serviceWorker' in navigator){
+             navigator.serviceWorker
+             .register('./sw.js')
+             .then(registration=>{
+                 console.log('re',registration)
+             })
+             .catch(error=>{
+                 console.log('er',error)
+             })
+            }
+     })
+     
+    //  如果页面进来 我们发现用户没有联网 给用户提供一个通知
+    if(Notification.permission === 'default'){
+        //得到用户的许可
+        Notification.requestPermission()
+    }
+    if(!navigator.onLine){
+        new Notification('提示',{body:"你当前没有网络，你访问的是缓存"})
+    }
+    window.addEventListener('online',function(){
+        new Notification('提示',{body:"你已经连接上网络了，请刷新访问最新的数据"})
+    })
+   </script>
+</body>
+</html>

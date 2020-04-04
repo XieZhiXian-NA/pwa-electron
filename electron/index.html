@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        .content{
+            height: 100px;
+            width: 400px;
+            background-color: #bfa;
+            overflow: auto;
+        }
+        #send{
+            width: 50px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+   <div class="content" id="content">
+   </div>
+   <button id="send">send</button>
+   <button id="re">接受</button>
+   <button id="sy">同步数据</button>
+   <button id="create-new-window">remote创建新窗口</button>
+   <button id="create-new">通信创建新窗口</button>
+
+   <input type="text"/>
+   <p>我是一个测试内容</p>
+
+    <a id="turn" href="http://baidu.com">跳转链接</a>
+
+    <webview id="foo" src="https://www.github.com/" style="width:100px; height:100px"></webview>
+
+   <script src="./ipcRenderer.js"></script>
+   <script src="./index.js"></script>
+   <script src="./leftmenu.js"></script>
+</body>
+</html>
